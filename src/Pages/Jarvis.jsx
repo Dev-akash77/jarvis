@@ -11,15 +11,15 @@ const Jarvis = () => {
     return <Login />;
   }
 
-  // useEffect(() => {
-  //   if (loginUserData) {
-  //     speak(
-  //       `Hi ${
-  //         loginUserData?.userName?.split(" ")[0] || loginUserData?.userName
-  //       }, I am Jarvis how can I help you`
-  //     );
-  //   }
-  // }, [loginUserData]);
+  useEffect(() => {
+    if (loginUserData) {
+      speak(
+        `Hi ${
+          loginUserData?.userName?.split(" ")[0] || loginUserData?.userName
+        }, I am Jarvis how can I help you`
+      );
+    }
+  }, [loginUserData]);
 
   return (
     <div className="h-screen w-screen overflow-hidden">
