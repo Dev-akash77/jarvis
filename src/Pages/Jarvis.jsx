@@ -11,15 +11,15 @@ const Jarvis = () => {
     return <Login />;
   }
 
-  useEffect(() => {
-    if (loginUserData) {
-      speak(
-        `Hi ${
-          loginUserData?.userName?.split(" ")[0] || loginUserData?.userName
-        }, I am Jarvis how can I help you`
-      );
-    }
-  }, [loginUserData]);
+  // useEffect(() => {
+  //   if (loginUserData) {
+  //     speak(
+  //       `Hi ${
+  //         loginUserData?.userName?.split(" ")[0] || loginUserData?.userName
+  //       }, I am Jarvis how can I help you`
+  //     );
+  //   }
+  // }, [loginUserData]);
 
   return (
     <div className="h-screen w-screen overflow-hidden">
@@ -44,7 +44,7 @@ const Jarvis = () => {
       <div className="cc">
         {!listining ? (
           <p
-            className="w-[30%] py-2 rounded-3xl flex items-center justify-center bg-[#8efbff95] gap-2 mt-10 cursor-pointer"
+            className="md:w-[30%] w-[60%] py-2 rounded-3xl flex items-center justify-center bg-[#8efbff95] gap-2 mt-10 cursor-pointer"
             onClick={(e) => {
               handleClick(e);
             }}
