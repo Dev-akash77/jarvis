@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "description": "A robust system that ensures the application is always available for users by maintaining real-time uptime, monitoring server performance, and handling critical alerts to prevent downtime.",
+        "heading": "Always Online"
+    },
+    {
+        "id": "2",
+        "description": "A feature designed to provide instant responses to user queries, ensuring a smooth and fast user experience. It acts as the initial layer of interaction, offering greetings, quick solutions, and routing users to advanced features if necessary.",
+        "heading": "First Response"
+    },
+    {
+        "id": "3",
+        "description": "An integrated artificial intelligence module that leverages machine learning algorithms and user data to deliver personalized suggestions, predict user needs, and adapt dynamically to user behavior for an enhanced experience.",
+        "heading": "Integrated AI"
+    },
+    {
+        "id": "4",
+        "description": "Additional functionalities that go beyond core features, such as exporting user data, advanced customization options, or integration with third-party tools, allowing users to tailor the system to their specific needs.",
+        "heading": "Extra Function"
+    }
+]

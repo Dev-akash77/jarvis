@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: "Work Sans", sans-serif;
+}
+:root {
+  --black: #000000; /* Dark primary color for text and backgrounds */
+  --cyan: cyan;
+  --text: #ffff;
+}
+.container {
+  width: 90%;
+}
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: var(--black);
+  color: var(--text);
+}
+html {
+  overflow-x: hidden;
+}
+.container {
+  width: 90%;
+}
+.cc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* From Uiverse.io by Navarog21 */
+button {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149cea;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 25px #1479ea;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  /* background-color: var(--black); */
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  /* background-color: var(--black); */
+  transition: 0.5s;
+}
+
+button:hover::before,
+button:hover::after {
+  transform: scale(0);
+}
+
+/* button:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+} */
+.highlight {
+  color: var(--cyan);
+  font-style: 500;
+}
+.card_main {
+  box-shadow: rgba(66, 67, 67, 0.2) 0px 7px 29px 0px;
+  transition: 0.3s ease;
+}
+.card_heading {
+  position: relative;
+}
+.card_heading::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -0.2rem;
+  height: 0.2rem;
+  width: 20%;
+  border-radius: 5rem;
+  background-color: var(--cyan);
+}
+.card_main:hover {
+  transform: scale(1.02);
+}
+
+/* From Uiverse.io by mrhyddenn */
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.shadow__btn {
+  background: rgb(0, 200, 255);
+  box-shadow: 0 0 25px var(--cyan);
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 0 5px rgb(0, 213, 255), 0 0 25px rgb(0, 187, 255),
+    0 0 50px rgb(0, 187, 255), 0 0 100px rgb(0, 179, 255);
+}
+
+/* From Uiverse.io by bhaveshxrawat */ 
+.card {
+  background: #07182E;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  ;
+  inset: 5px;
+  border-radius: 15px;
+}  
+/* .card:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+  animation: rotBGimg 3.5s linear infinite;
+} */
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by JkHuger */ 
+.wave-menu {
+  border: 4px solid var(--cyan);
+  border-radius: 50px;
+  width: 200px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: ease 0.2s;
+  position: relative;
+  background: transparent;
+}
+
+.wave-menu li {
+  list-style: none;
+  height: 30px;
+  width: 4px;
+  border-radius: 10px;
+  background: var(--cyan);
+  margin: 0 6px;
+  padding: 0;
+  animation-name: wave1;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: ease 0.2s;
+}
+
+.wave-menu li:nth-child(2) {
+  animation-name: wave2;
+  animation-delay: 0.2s;
+}
+
+.wave-menu li:nth-child(3) {
+  animation-name: wave3;
+  animation-delay: 0.23s;
+  animation-duration: 0.4s;
+}
+
+.wave-menu li:nth-child(4) {
+  animation-name: wave4;
+  animation-delay: 0.1s;
+  animation-duration: 0.3s;
+}
+
+.wave-menu li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.wave-menu li:nth-child(6) {
+  animation-name: wave2;
+  animation-duration: 0.5s;
+}
+
+.wave-menu li:nth-child(8) {
+  animation-name: wave4;
+  animation-delay: 0.4s;
+  animation-duration: 0.25s;
+}
+
+.wave-menu li:nth-child(9) {
+  animation-name: wave3;
+  animation-delay: 0.15s;
+}
+
+@keyframes wave1 {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0.5);
+  }
+}
+
+@keyframes wave2 {
+  from {
+    transform: scaleY(0.3);
+  }
+
+  to {
+    transform: scaleY(0.6);
+  }
+}
+
+@keyframes wave3 {
+  from {
+    transform: scaleY(0.6);
+  }
+
+  to {
+    transform: scaleY(0.8);
+  }
+}
+
+@keyframes wave4 {
+  from {
+    transform: scaleY(0.2);
+  }
+
+  to {
+    transform: scaleY(0.5);
+  }
+}
+
+
